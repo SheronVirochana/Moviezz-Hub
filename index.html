@@ -1,63 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moviezz Hub</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="icon" href="assets/ChatGPT Image Nov 29, 2025, 06_08_57 PM.png" type="image/png">
+    <title>Moviezz Hub - Movies & TV Shows</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container">
-        <header
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <div class="col-md-3 mb-2 mb-md-0"> <a href="/"
-                    class="d-inline-flex link-body-emphasis text-decoration-none"> <svg class="bi" width="40"
-                        height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg> </a> </div>
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2">Features</a></li>
-                <li><a href="#" class="nav-link px-2">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2">About</a></li>
-            </ul>
-            <div class="col-md-3 text-end"> <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">MOVIEZZ<span class="logo-accent">HUB</span></h1>
+                <span class="logo-subtitle">MOVIES</span>
             </div>
-        </header>
-    </div>
-    <h1>Moviezz Hub</h1>
+            
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <i class="fas fa-film"></i>
+                    <span>All Movies</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-tv"></i>
+                    <span>TV Shows</span>
+                </div>
+                <div class="nav-item dropdown">
+                    <i class="fas fa-globe"></i>
+                    <span>Languages</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content languages-dropdown">
+                        <div class="dropdown-grid">
+                            <div class="dropdown-column">
+                                <a href="#">English</a>
+                                <a href="#">Tamil</a>
+                                <a href="#">Malayalam</a>
+                                <a href="#">France</a>
+                                <a href="#">Germany</a>
+                                <a href="#">Poland</a>
+                                <a href="#">Philippine</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="#">Other Language</a>
+                                <a href="#">Telugu</a>
+                                <a href="#">Kannada</a>
+                                <a href="#">Sinhala</a>
+                                <a href="#">Indonesian</a>
+                                <a href="#">Arabic</a>
+                                <a href="#">Vietnam</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="#">Japanese</a>
+                                <a href="#">Hindi</a>
+                                <a href="#">Korea</a>
+                                <a href="#">Spain</a>
+                                <a href="#">Bengali</a>
+                                <a href="#">Turkish</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <i class="fas fa-list"></i>
+                    <span>Genres</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content genres-dropdown">
+                        <div class="dropdown-grid">
+                            <div class="dropdown-column">
+                                <a href="#">History</a>
+                                <a href="#">Action</a>
+                                <a href="#">Horror</a>
+                                <a href="#">Fantasy</a>
+                                <a href="#">Mystery</a>
+                                <a href="#">18+</a>
+                                <a href="#">Short</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="#">Drama</a>
+                                <a href="#">Comedy</a>
+                                <a href="#">Romance</a>
+                                <a href="#">Science Fiction</a>
+                                <a href="#">War</a>
+                                <a href="#">Documentary</a>
+                                <a href="#">Documentary</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="#">Thriller</a>
+                                <a href="#">Crime</a>
+                                <a href="#">Adventure</a>
+                                <a href="#">Family</a>
+                                <a href="#">Animation</a>
+                                <a href="#">Sport</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>Years</span>
+                </div>
+            </nav>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+    </header>
 
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="movies-section">
+                    <div class="section-header">
+                        <h2>Movies</h2>
+                    </div>
+                    
+                    <div class="section-title">
+                        <h3>Recently Added</h3>
+                    </div>
+                    
+                    <div class="movies-grid" id="moviesGrid">
+                    </div>
+                </div>
+                
+                <aside class="sidebar">
+                    <div class="release-years">
+                        <h3>Release year</h3>
+                        <div class="years-grid">
+                            <div class="year-item">2025</div>
+                            <div class="year-item">2024</div>
+                            <div class="year-item">2023</div>
+                            <div class="year-item">2022</div>
+                            <div class="year-item">2021</div>
+                            <div class="year-item">2020</div>
+                            <div class="year-item">2019</div>
+                            <div class="year-item">2018</div>
+                            <div class="year-item">2017</div>
+                            <div class="year-item">2016</div>
+                            <div class="year-item">2015</div>
+                            <div class="year-item">2014</div>
+                            <div class="year-item">2013</div>
+                            <div class="year-item">2012</div>
+                            <div class="year-item">2011</div>
+                            <div class="year-item">2010</div>
+                            <div class="year-item">2009</div>
+                            <div class="year-item">2008</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+     <footer class="footer">
+        <p>© Powerd By Moviezz Hub</p>
+    </footer>
 
-
-
-
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-            </ul>
-            <p class="text-center text-body-secondary">© 2025 Moviezz Hub, Sheron Virochana</p>
-        </footer>
-    </div>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="assets/js/movies-app.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
-
 </html>
