@@ -13,10 +13,10 @@ body {
 
 .footer {
     text-align: center;
-    font-size: 1rem;
-     color: #fff;
-  
-    padding: 1rem 0;
+    font-size: 15px ;
+     color: #ffffff;
+       background: linear-gradient( rgba(10, 0, 0, 0.001), #a50101);
+    padding: 2rem 0;
     margin-top: auto;
     border-top: 1px solid var(--border-color);
 }
@@ -32,18 +32,34 @@ body {
     background-color: #111111;
     padding: 15px 0;
     border-bottom: 1px solid #333;
+     background: linear-gradient( rgb(151, 0, 0), #00000020);
 }
 
 .header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
     gap: 10px;
+    
+}
+
+.nav-search input {
+    padding: 8px 12px;
+    border: 1px solid #010101;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background-color: #bebaba;
+}
+
+.nav-search input:focus {
+    border-color: #101111;
 }
 
 .logo {
@@ -149,6 +165,9 @@ body {
 .search-container {
     display: flex;
     align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #010101;
+    border-radius: 6px;
 }
 
 .search-icon {
@@ -207,7 +226,7 @@ body {
 
 .movie-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgb(192, 0, 0);
+    box-shadow: 0 15px 35px rgba(192, 0, 0, 0.349);
 }
 
 .movie-poster {
